@@ -176,30 +176,19 @@ body {
   transition: all 300ms;
 }
 
-.text-form > span {
+.text-form > span,
+.text-form > p {
   font: 500 1.5rem/1.8rem 'Roboto';
   color: var(--c-text);
   width: 100%;
   word-wrap: break-word;
 }
 
-.text-form > div:last-child {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-  gap: 1rem
+.text-form > p {
+  color: #D93339 !important;
 }
 
-.text-form > div > span {
-  font: 500 1.5rem/1.8rem 'Roboto';
-  color: #D93339;
-  width: 100%;
-  word-wrap: break-word;
-}
-
-.text-form > div > button {
+.text-form > button {
   display: none;
   flex-direction: row;
   justify-content: center;
@@ -254,7 +243,8 @@ body {
   opacity: 1;
 }
 
-.encrypt-form > button {
+.encrypt-form > button,
+.text-form > button {
   width: 100%;
   color: var(--c-white);
   background-color: var(--c-yimi);
@@ -268,7 +258,12 @@ body {
   position: relative;
 }
 
-.encrypt-form > button::after {
+.text-form > button > img {
+  filter: invert(98%) sepia(10%) saturate(499%) hue-rotate(176deg) brightness(99%) contrast(92%);
+}
+
+.encrypt-form > button::after,
+.text-form > button::after {
   border-radius: 1rem;
   content: '';
   position: absolute;
@@ -280,7 +275,8 @@ body {
   transition: all 600ms;
 }
 
-.encrypt-form button:hover::after {
+.encrypt-form button:hover::after,
+.text-form button:hover::after {
   width: 100%;
 }
 
