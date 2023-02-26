@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="assets/icons/favicon.ico">
+  <title>Cifrado de Cesar</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div id="alertNotification" class="alert-notification">
+    <img src="https://web.yimiglobal.com/assets/icons/fail-alert.svg" alt="">
+    <p>Por favor ingrese todos los datos correspondientes.</p>
+  </div>
+
+  <div class="encrypt-form">
+    <h1>Cifrado de Cesar</h1>
+    <div class="input-container">
+      <input id="inputEncrypt" type="text" placeholder="Texto a encriptar" onkeypress="return alphanumeric(event)" required>
+      <label for="inputEncrypt">Texto a encriptar</label>
+    </div>
+    <div class="input-container">
+      <input id="inputKey" type="text" placeholder="Palabra clave" onkeypress="return alphanumeric(event)" required>
+      <label for="inputKey">Palabra clave</label>
+    </div>
+    <button id="btnEncrypt">Encriptar</button>
+  </div>
+  <div id="textForm" class="text-form">
+    <div class="close-button" onclick="closePanel();">
+      <p>x</p>
+    </div>
+    <span id="encryptTxt">Texto: </span>
+    <span id="keyTxt">Clave emparejada: </span>
+    <div>
+      <span id="responseTxt">Respuesta: </span>
+      <button id="copyButton" onclick="copyClipboard('')">
+        Copiar
+        <img src="https://web.yimiglobal.com/assets/icons/copy-blue.svg" alt="">
+      </button>
+    </div>
+  </div>
+  <script src="assets/js/encrypt.js"></script>
+</body>
+</html>
